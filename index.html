@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="script1.js"></script>
+      <!-- Css for styling -->
+      <link rel="stylesheet" href="style.css">
+      <title>Quiz Application</title>
+</head>
+<body>
+      <!----------- Home Page-------->
+<div class="quiz-home-box custom-box show" id="questionScreen">
+      <!-- User Details Section -->
+      <img src="logo">
+      <h1>Hello User!</h1>
+      <h4 class="title">Enter your name to continue the Quiz.</h4>
+      <div class="input-item">
+            <input type="text" placeholder="Enter Your Name..." class="item0" id="Name">
+            <input type="button" value="Enter" class="item1" id="Categoryshow" onclick="selectCategory()">
+      </div>
+      <!-- =============User Details Section Ends============ -->
+      <!------------- Category Section ------------>
+      <H4 class="item2">You'll have 10 second to answer each questions.</H4>
+      
+ 
+      <div class="category-box" id="categoryAll">
+      <h1 id="main-p0">Select Category</h1>
+
+      <span>
+            <div onclick="selectFirst()" id="selectFirst"><h2>Pipes And Cisterns</h2></div>
+            <div onclick="selectSecond()"><h2>Probability</h2></div>
+      </span>
+      <span>
+            <div onclick="selectThird()"><h2>Problem On Ages</h2></div>
+            <div onclick="selectFourth()"><h2>Profit And Loss</h2></div>
+      </span>
+      </div>
+      <!-- ==============Category Section Ends================ -->
+</div>
+
+
+<!--===================================This Is A Pipe And Cristerns MOC =============  -->
+<div class="quiz-box custom-box" id="Screen">
+      <h1 style="text-decoration: none;" id="quizHeader"></h1>
+      <h1 class="category-text"></h1>
+<div class="stats">
+<div class="quiz-time">
+<div class="remaining-time timerBox" id="timer"></div>
+      <span class="time-up-text">Time's Up</span>
+</div>
+<div class="score-board">
+      <span class="score-text">score:</span>
+      <span class="correct-answer" id="correct-answer"></span>
+</div>
+</div>
+<div class="question-box">
+<div class="current-question-num" id="current-question-num">0
+</div>
+<div class="question-text questionBox" id="question-text">
+
+</div>
+</div>
+<div class="option-box optionBox">
+      <span>
+            <div>
+            <input type="radio" name="opt" id="opt1">
+            <label for="opt1" id="option1"></label>
+            </div>
+            <div>
+            <input type="radio" name="opt" id="opt2">
+            <label for="opt2" id="option2"></label>
+            </div>
+      </span>
+      <span>
+            <div>
+            <input type="radio" name="opt" id="opt3">
+            <label for="opt3" id="option3"></label>
+            </div>
+            <div>
+            <input type="radio" name="opt" id="opt4">
+            <label for="opt4" id="option4"></label>
+            </div>
+      </span>
+</div>
+<div class="answer-description"></div>
+<div class="next-question">
+<button type="button" class="next-question-btn btn" id="next-button">Next question</button>
+</div>
+</div>
+<!-- ================================ =========================================================== -->
+<div class="quiz-over-box custom-box" id="resultScreen">
+      <h1 style="font-weight: bold;">Quiz Result :</h1>
+      
+      <h4 style="font-weight: bold;"><span class="name" id="UserName"></span> your result is :</h4>
+      <h4 style="font-weight: bold;">Total Time Taken: <span class="total-time" id="Totaltime">seconds</span>Seconds</h4>
+
+      <h4 style="font-weight: bold;">Total Question: <span class="total-questions" id="totalQuestion">10</span></h4>
+      <h4 style="font-weight: bold;">Attempt: <span class="total-attempt" id="attemptQuestion">1</span></h4>
+      <h4 style="font-weight: bold;">Correct: <span class="total-correct" id="correctAnswers">1</span></h4>
+      <h4 style="font-weight: bold;">Wrong: <span class="total-wrong" id="wrongAnswers">1</span></h4>
+
+      <h4 style="font-weight: bold;">Percentage: <span class="percentage" id="percentage"></span>%</h4>
+      <button type="button" class="start-agian-quiz-btn btn" onclick="RestartQuiz()">Start Again</button>
+      <button type="button" class="go-home-btn btn" onclick="RestartApp()">Go To Home</button>
+</div>
+      <!-- ================Home Page Ends================-->
+      <!-- Main Script Js -->
+      <script src="script.js" ></script>
+</body>
+</html>
